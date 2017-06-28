@@ -2,4 +2,4 @@
 
 Hi, this is hexo-theme-jsimple sample website.
 
-You can click here(https://shuoit.net) to visit.
+You can click here(http://blog.choong.net) to visit.
