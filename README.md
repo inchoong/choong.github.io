@@ -1,2 +1,2 @@
 # choong.github.io
-http://choong.net
+https://choong.net
