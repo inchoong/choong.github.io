@@ -159,6 +159,58 @@
 		}
 	</style>
 	<style>
+		<!-- 二维码的动态效果 
+		-->
+		body
+		{
+		margin:0px;
+		}
+		#box
+		{
+		width:100%;
+		height:80px;
+		background-color:#4671303;
+		position:fixed;
+		bottom:0px;
+		}
+		#wechat
+		{
+		width:104px;
+		height:104px;
+		background-image:url("https://cdn.jsdelivr.net/gh/inchoong/zh-CN/images/logo.png");
+		background-repeat:no-repeat;
+		background-size:100%;
+		margin:28px
+		auto;
+		position:relative;
+		}
+		#code
+		{
+		display:none;
+		width:180px;
+		height:180px;
+		background-color:white;
+		background-image:url("https://cdn.jsdelivr.net/gh/inchoong/zh-CN/images/WX-Qcode.png");
+		background-repeat:no-repeat;
+		background-size:100%;
+		position:absolute;
+		left:-38px;
+		bottom:107px;
+		}
+		#wechat:hover
+		{
+		background-color:lightblue;
+		display:inline-block;
+		width:100px;
+		height:100px;
+		background-image:url("https://cdn.jsdelivr.net/gh/inchoong/zh-CN/images/WX-logo.svg");
+		}
+		#wechat:hover>#code
+		{
+		display:block;
+		}
+	</style><!-- 二维码的动态效果 -->
+	<style>
 		/* 文本垂直对齐图像 https://www.w3cschool.cn/tryrun/showhtml/trycss_vertical-align */
 		img.top {
 			vertical-align: text-top;
@@ -208,7 +260,11 @@
 									"Take action to think, to change, to create.",
 									"用行动去思考，去改变、去创造。",
 									"现状不可描述，未来无法预测，一切皆有可能。",
-									"愿你被这个世界温柔以待 ❤ 即使生命总以刻薄荒芜相欺"
+									"庄敬自强，处变不惊",
+									"书犹药也，善读之可以医愚 <br>——— 西汉·经学家刘向《说苑》",
+									"愿你被这个世界温柔以待 ❤ 即使生命总以刻薄荒芜相欺",
+									"淋过雨的人，总想着给别人撑伞。其实没安全感的人，才会买伞，有经历过的，才懂得珍惜，特别会给别人安全感。",
+									"世间所有相遇，都是久别重逢"
 								],
 								startDelay: 200,
 								backDelay: 2000,
@@ -225,10 +281,14 @@
 				<a href="https://rebang.today/" title="今日热榜 - 全站热榜">聚合·热榜</a>
 				<a href="https://musicforprogramming.net/fortynine/" title="musicForProgramming();">编程·音乐</a>
 				<br>
-				<a href="https://cloud.oracle.com/?tenant=taoste" title="Oracle Cloud 免费·甲骨文云服务器">Oracle Cloud</a>
-				<a href="https://app.slack.com/client/T053CV3ABBM/D052YGY2XUP"
+				<a href="https://app.follow.is/" title="RSS阅读器-在线网页版 | Follow 官网">Follow</a>
+				<a href="https://chatgpt.com/" title="OpenAI.ChatGPT 官网 (需科学上网@无忧行 的加持)">ChatGPT</a>
+				<a href="https://www.marscode.cn/workbench" title="豆包 MarsCode - 工作台">MarsCode</a>
+				<br>
+				<!--<a href="https://app.slack.com/client/T053CV3ABBM/D052YGY2XUP"
 					title="媲美ChatGPT，Anthropic公司推出聊天机器人Claude">Claude GPT</a>
-				<a href="https://w.xjh23.top/#/dashboard" title="【相见欢，科·学·上·网】一键订阅：复制订阅地址，导入到Clash">相见欢</a>
+				<a href="https://w.xjh23.top/#/dashboard" title="【相见欢，科·学·上·网】一键订阅：复制订阅地址，导入到Clash">相见欢</a>-->
+				<a href="https://cloud.oracle.com/?tenant=taoste" title="Oracle Cloud 免费·甲骨文云服务器">Oracle Cloud</a>
 				<a href="https://choong.net/ok/">about</a>
 			</div>
 		</section>
@@ -243,11 +303,12 @@
 	<div id="footer">
 		<div id="footer-inner">
 			<div id="footer-content">
-				<br>
 				<p id=copyright align="center">
-				<p class="info" style="color: #808080;">( Hold on! The video might take a while to load. )</p>
+				<p class="info" style="color: #808080;">( Hold on! The video
+					might take a while to load. )</p>
 				<strong style="color: #FFFFFF;">
-					Copyright &copy;
+					Copyright
+					&copy;
 					<script>
 						// <![CDATA[
 						document.write(new Date().getFullYear());
@@ -255,6 +316,16 @@
 					</script>
 				</strong>
 				<br>
+				<a href="https://cloud.oracle.com/?tenant=taoste" title="Oracle Cloud 免费·甲骨文云服务器"
+					target="_blank"><!-- 用于包含二维码所有的内容，显示在页面中的底部 -->
+					<div id="box">
+						<!-- 用于显示微信图标 -->
+						<div id="wechat">
+							<!-- 用于显示，隐藏二维码图片 -->
+							<div id="code"></div>
+						</div>
+					</div><!-- 用于包含二维码所有的内容，显示在页面中的底部 -->
+				</a><br>
 				<a href="https://www.oracle.com/cn/cloud/" title="云基础设施 | Oracle 中国 144.24.20.160" target="_blank">
 					<img class="bottom" style="vertical-align: text-bottom;" src="https://www.oracle.com/favicon.ico"
 						width="16" height="16">
